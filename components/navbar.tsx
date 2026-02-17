@@ -7,6 +7,7 @@ import { MessageSquare } from "lucide-react";
 import ThemeToggle from "./theme-toggle";
 import { Button } from "./ui/button";
 import { SignedOut, SignInButton } from "@clerk/nextjs";
+import { SignedIn, UserButton } from "@clerk/nextjs";
 
 export default function Navbar() {
     return <nav className="border-b bg-background">
@@ -41,6 +42,9 @@ export default function Navbar() {
               </Button>
             </SignInButton>
           </SignedOut>
+          <SignedIn>
+            <UserButton/>
+          </SignedIn>
           </div>
         </div>
 
